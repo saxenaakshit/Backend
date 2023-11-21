@@ -27,3 +27,14 @@ app.post('/api/cars',(request,response)=>{
     console.log(brand);
     response.send("Car submitted Successfully")
 })
+
+
+//CREATE CONNECTION BETWEEN OBJECT(EXPRESS) AND THE DATA(DATABASE)
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://127.0.0.1:27017/myDatabase1', {
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+})
+.then(() => {console.log("Connection Successful")})
+.catch( (error) => {console.log("Recieved an error")} );
