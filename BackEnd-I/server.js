@@ -1,3 +1,11 @@
+//step1: create a folder
+//step2:- move into that folder
+//step3:- npm init -y
+//step4:- open folder using VSCode
+//step5:- create server.js
+
+
+
 //SERVER INSTANTIATE
 const express = require('express')
 const app = express();
