@@ -2,25 +2,28 @@
 const mongoose = require("mongoose");
 
 
-//router handeler
+//route handler
 const postSchema = new mongoose.Schema({
     title: {
-        type:String,
-        required:true,
-    },
-    body:{
-        type:String,
+        type: String,
         required: true,
     },
-    likes:[{
+    body: {
+        type: String,
+        required: true,
+    },
+    likes: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref:"Like",
+        ref: "Like",
     }],
     comments: [{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"Comment",
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Comment",
     }]
 });
+
+
+
 
 //export
 module.exports = mongoose.model("Post", postSchema);

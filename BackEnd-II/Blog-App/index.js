@@ -15,8 +15,8 @@ const blog = require("./routes/blog");
 app.use("/api/v1",blog);
 
 //establish connection with DB
-const connectDb=require("./config/database");
-connectDb();
+const connectWithDb=require("./config/database");
+connectWithDb();
 
 //start with server
 app.listen(PORT,()=>{
